@@ -47,7 +47,6 @@ export async function loadTabla() {
 
     await Tone.loaded();
 }
-}
 
 export function startTaal(taalName, bpm, scale) {
 
