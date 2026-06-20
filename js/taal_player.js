@@ -36,10 +36,6 @@ export async function loadTabla() {
 
     if (Object.keys(players).length > 0) return;
 
-export async function loadTabla() {
-
-    if (Object.keys(players).length > 0) return;
-
     for (const bol of bolFiles) {
 
         const url = new URL(`../audio/${bol}.mp3`, import.meta.url).href;
