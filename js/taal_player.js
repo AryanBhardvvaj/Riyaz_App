@@ -40,11 +40,12 @@ export async function loadTabla() {
 
         const url = new URL(`../audio/${bol}.mp3`, import.meta.url).href;
 
-        players[bol] = new Tone.Player(url);
+        const player = new Tone.Player(url);
 
         player.connect(pitchShift);
 
         players[bol] = player;
+
     }
 
     await Tone.loaded();
