@@ -38,7 +38,9 @@ export async function loadTabla() {
 
     for (const bol of bolFiles) {
 
-        const player = new Tone.Player(`../audio/${bol}.mp3`);
+        const url = new URL(`../audio/${bol}.mp3`, import.meta.url).href;
+
+        players[bol] = new Tone.Player(url);
 
         player.connect(pitchShift);
 
