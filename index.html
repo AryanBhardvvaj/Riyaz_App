@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Riyaz</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#111827;
+    color:white;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+}
+
+.logo{
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:40px;
+}
+
+.logo h1{
+    font-size:2.8rem;
+}
+
+.card{
+    background:#1f2937;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-size:.9rem;
+}
+
+select,
+input{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    font-size:1rem;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#10b981;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:100;
+}
+
+.overlay img{
+    width:220px;
+    max-width:80%;
+}
+</style>
+
+</head>
+
+<body>
+<div class="container">
+
+    <div class="logo">
+        <h1>Riyaz</h1>
+    </div>
+
+    <!-- Scale -->
+
+    <div class="card">
+
+        <label for="scale">Pitch</label>
+
+        <select id="scale">
+            <option>C</option>
+            <option>C#</option>
+            <option>D</option>
+            <option>D#</option>
+            <option>E</option>
+            <option>F</option>
+            <option>F#</option>
+            <option>G</option>
+            <option>G#</option>
+            <option>A</option>
+            <option>A#</option>
+            <option>B</option>
+        </select>
+
+    </div>
+
+    <!-- Tanpura -->
+
+    <div class="card">
+
+        <label for="tanpuraVolume">
+            Tanpura Volume
+        </label>
+
+        <input
+            id="tanpuraVolume"
+            type="range"
+            min="-40"
+            max="0"
+            value="-8"
+        >
+
+        <button id="toggleTanpura">
+            Start Tanpura
+        </button>
+
+    </div>
+
+    <!-- Taal Selection -->
+
+    <div class="card">
+
+        <label for="taalSelect">
+            Taal
+        </label>
+
+        <select id="taalSelect">
+            <option value="teentaal">Teen Taal</option>
+            <option value="ektaal">Ektaal</option>
+            <option value="jhaptaal">Jhaptaal</option>
+            <option value="rupak">Rupak</option>
+            <option value="dadra">Dadra</option>
+            <option value="keherwa">Keherwa</option>
+        </select>
+
+    </div>
+
+    <!-- Tabla -->
+
+    <div class="card">
+
+        <label for="tablaVolume">
+            Tabla Volume
+        </label>
+
+        <input
+            id="tablaVolume"
+            type="range"
+            min="-40"
+            max="0"
+            value="-8"
+        >
+
+        <label for="tempo">
+            Tabla Speed
+        </label>
+
+        <select id="tempo">
+            <option value="60">60 BPM</option>
+            <option value="80">80 BPM</option>
+            <option value="100" selected>100 BPM</option>
+            <option value="120">120 BPM</option>
+            <option value="140">140 BPM</option>
+            <option value="160">160 BPM</option>
+        </select>
+
+        <button id="toggleTabla">
+            Start Tabla
+        </button>
+
+    </div>
+
+    <!-- Future Features -->
+
+    <div class="card">
+
+        <button id="playManjeera">
+            Manjeera
+        </button>
+
+        <button id="playSwarmandal">
+            Swarmandal
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Future Feature Overlay -->
+
+<div class="overlay" id="overlay">
+    <img src="./images/ff.jpg" alt="Coming Soon">
+</div>
+
+<script type="module" src="./js/main.js"></script>
+
+</body>
+</html>
